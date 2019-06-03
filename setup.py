@@ -9,17 +9,21 @@ setuptools.setup(
     name="random_writer",
     version="0.0.1",
 
-    description="An empty CDK Python app",
+    description="CDK Python example utilizing Lambda, CWEvent and Dynamodb",
     long_description=long_description,
     long_description_content_type="text/markdown",
 
-    author="author",
+    author="Sam Keen",
 
     package_dir={"": "random_writer"},
     packages=setuptools.find_packages(where="random_writer"),
 
     install_requires=[
         "aws-cdk.cdk",
+        "aws-cdk.aws-events",
+        "aws-cdk.aws-events-targets",
+        "aws-cdk.aws-lambda",
+        "aws-cdk.aws-dynamodb"
     ],
 
     python_requires=">=3.6",
